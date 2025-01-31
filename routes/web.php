@@ -53,7 +53,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dog-profiles/create', [DogProfileController::class, 'create'])->name('dog_profiles.create');
     Route::post('/dog-profiles', [DogProfileController::class, 'store'])->name('dog_profiles.store');
     Route::get('/dog-profiles/{dogProfile}', [DogProfileController::class, 'show'])->name('dog_profiles.show');
-    Route::get('/dog-profile/edit', [DogProfileController::class, 'edit'])->name('dog-profile.edit');
+    Route::get('/dog-profile/{dogProfile}/edit', [DogProfileController::class, 'edit'])->name('dog_profile.edit');
 
     // 分析結果
     Route::get('/analyses', [AnalysisController::class, 'index'])->name('analyses.index');

@@ -18,11 +18,11 @@
                     <div class="grid grid-cols-2 gap-8 mb-8">
                         <div>
                             <p class="text-gray-600">現在の体重</p>
-                            <p class="text-4xl font-bold">4.0 kg</p>
+                            <p class="text-4xl font-bold">{{ $dietPlan['current_weight'] }} kg</p>
                         </div>
                         <div>
                             <p class="text-gray-600">理想体重</p>
-                            <p class="text-4xl font-bold">2.8 kg</p>
+                            <p class="text-4xl font-bold">{{ $dietPlan['ideal_weight'] }} kg</p>
                         </div>
                     </div>
 
@@ -80,7 +80,7 @@
                             </svg>
                             TOPページへ戻る
                         </a>
-                        <a href="{{ route('dog-profile.edit') }}" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md font-semibold text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <a href="{{ route('dog_profiles.create') }}" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md font-semibold text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             プロフィール編集
                         </a>
                     </div>

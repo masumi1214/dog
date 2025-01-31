@@ -48,9 +48,9 @@
 
                     <div>
                         <h2 class="text-lg font-semibold text-gray-700">アレルギー情報</h2>
-                        @if(!empty($allergies) && is_array($allergies) && count($allergies) > 0)
+                        @if(!empty($dogProfile->allergies) && is_array($dogProfile->allergies) && count($dogProfile->allergies) > 0)
                             <ul class="mt-2 list-disc list-inside">
-                                @foreach($allergies as $allergy)
+                                @foreach($dogProfile->allergies as $allergy)
                                     <li class="text-gray-600">{{ $allergy }}</li>
                                 @endforeach
                             </ul>
@@ -75,7 +75,7 @@
                         class="flex justify-center items-center bg-black hover:bg-gray-800 text-white px-4 py-3 rounded-md text-sm font-medium">
                         ダイエット診断
                     </a>
-                    <a href="{{ route('dog-profile.edit', $dogProfile->id) }}" 
+                    <a href="{{ route('dog_profiles.create', Auth::user()->dogProfile->id) }}" 
                         class="flex justify-center items-center bg-white border border-gray-300 hover:bg-gray-50 text-black px-4 py-3 rounded-md text-sm font-medium">
                         プロフィール編集
                     </a>

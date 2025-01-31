@@ -13,7 +13,7 @@
                 <div class="flex justify-between h-16">
                     <div class="flex">
                         <div class="flex-shrink-0 flex items-center">
-                            <a href="/" class="text-lg font-semibold text-gray-800">愛犬プロフィール</a>
+                            <a href={{ route('dog-dashboard') }} class="text-lg font-semibold text-gray-800">愛犬プロフィール</a>
                         </div>
                     </div>
                 </div>

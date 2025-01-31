@@ -29,7 +29,7 @@
                     @else
                         <div class="text-center py-4">
                             <p class="text-gray-600 mb-4">プロフィールが登録されていません。</p>
-                            <a href="{{ route('dog-profile.edit') }}" class="text-blue-600 hover:underline">
+                            <a href="{{ route('dog_profiles.create') }}" class="text-blue-600 hover:underline">
                                 プロフィールを登録する
                             </a>
                         </div>
@@ -42,25 +42,11 @@
                                 <p class="text-gray-600">食材を入力して栄養バランスを確認</p>
                             </div>
                         </a>
-                        
-                        <a href="{{ route('diet-diagnosis.show') }}" class="block">
-                            <div class="p-6 bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-semibold mb-2">ダイエット診断</h3>
-                                <p class="text-gray-600">体重管理のアドバイスを取得</p>
-                            </div>
-                        </a>
 
-                        <a href="{{ route('nutrition.analyses') }}" class="block">
+                        <a href="{{ route('nutrition.analyze') }}" class="block">
                             <div class="p-6 bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow">
                                 <h3 class="text-lg font-semibold mb-2">栄養分析履歴</h3>
                                 <p class="text-gray-600">過去の栄養分析結果を確認</p>
-                            </div>
-                        </a>
-
-                        <a href="{{ route('dog-profile.edit') }}" class="block">
-                            <div class="p-6 bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-semibold mb-2">プロフィール編集</h3>
-                                <p class="text-gray-600">愛犬の情報を更新</p>
                             </div>
                         </a>
                     </div>

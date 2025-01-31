@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class DietDiagnosisController extends Controller
 {
     public function show()
     {
+        $dogProfile = Auth::user()->dogProfile()->latest()->first();
+
         // 静的なデータを返す
         $dietPlan = [
-            'current_weight' => 4.0,
-            'ideal_weight' => 2.8,
+            'current_weight' => $dogProfile->weight,
+            'ideal_weight' => $dogProfile->weight - 2,
             'recommendation_type' => '減量プログラム',
             'daily_calories' => 145,
             'exercise_level' => '現在の運動量を25%増加',

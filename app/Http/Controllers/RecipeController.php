@@ -27,8 +27,8 @@ class RecipeController extends Controller
         $ingredients = Session::get('recipe_ingredients', []);
 
         // 新しい食材を追加
-// Ingredientモデルから栄養素情報を取得
-$ingredient = Ingredient::where('name', $request->ingredient_name)->first();
+        // Ingredientモデルから栄養素情報を取得
+        $ingredient = Ingredient::where('name', $request->ingredient_name)->first();
 
         // 新しい食材を追加
         $ingredients[] = [
@@ -73,10 +73,7 @@ $ingredient = Ingredient::where('name', $request->ingredient_name)->first();
     {
         // セッションに保存
         Session::put('recipe_name' ,$request->recipe_name);
-        return redirect()->route('recipe_name');
-
-        // 途中保存の処理（今回は省略）
-        return redirect()->route('recipe.new')->with('success', 'レシピを途中保存しました');
+        return redirect()->route('recipe.new');
     }
 }
 
